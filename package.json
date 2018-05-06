@@ -1,0 +1,35 @@
+{
+  "name": "nyanplacer",
+  "scripts": {
+    "build": "xo src && bili",
+    "push": "git push",
+    "test": "babel src --presets=env --out-dir temp/src && babel test --presets=env --out-dir temp/test && jest temp/test",
+    "publish": "echo \"not implemented\""
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "bili": "^1.6.0",
+    "jest": "^22.4.3"
+  },
+  "xo": {
+    "envs": [
+      "node"
+    ],
+    "space": 2,
+    "semicolon": false,
+    "esnext": true,
+    "overrides": [
+      {
+        "files": "**.test.js",
+        "envs": [
+          "node",
+          "jest"
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "regexgen": "^1.3.0"
+  }
+}
