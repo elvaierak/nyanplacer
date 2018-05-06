@@ -1,10 +1,18 @@
 {
-  "name": "nyanplacer",
+  "name": "@akarim/nyanplacer",
+  "description": "Replaces string subparts with provided functions.",
+  "main": "dist/nyanplacer.js",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Akarim <akari.miyanaka@protonmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elvaierak/nyanplacer"
+  },
   "scripts": {
     "build": "xo src && bili",
     "push": "git push",
-    "test": "babel src --presets=env --out-dir temp/src && babel test --presets=env --out-dir temp/test && jest temp/test",
-    "publish": "echo \"not implemented\""
+    "test": "babel src --presets=env --out-dir temp/src && babel test --presets=env --out-dir temp/test && jest temp/test"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -31,5 +39,6 @@
   },
   "dependencies": {
     "regexgen": "^1.3.0"
-  }
+  },
+  "keywords": []
 }
