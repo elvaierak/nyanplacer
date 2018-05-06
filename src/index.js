@@ -46,7 +46,7 @@ const compileMatches = (replacementObject, matches) => {
       const word = match.str.substr(match.index, match.length)
       const func = replacementObject[word]
 
-      if (!isFunction(func) || func.length === 0) {
+      if (!isFunction(func)) {
         throw new Error(`Replacer of a word '${word}' is not correct`)
       }
 
